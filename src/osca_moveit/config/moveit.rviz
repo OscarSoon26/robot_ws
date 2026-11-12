@@ -44,7 +44,7 @@ Visualization Manager:
       MoveIt_Allow_External_Program: false
       MoveIt_Allow_Replanning: false
       MoveIt_Allow_Sensor_Positioning: false
-      MoveIt_Planning_Attempts: 10
+      MoveIt_Planning_Attempts: 2
       MoveIt_Planning_Time: 5
       MoveIt_Use_Cartesian_Path: false
       MoveIt_Use_Constraint_Aware_IK: false
@@ -80,7 +80,37 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          camera_color_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_optical_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          caster_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          caster_2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -100,7 +130,7 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          left_caster:
+          intel_camera_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -141,11 +171,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           link_5:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          right_caster:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -219,7 +244,37 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          camera_color_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_optical_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          caster_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          caster_2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -239,7 +294,7 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          left_caster:
+          intel_camera_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -280,11 +335,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           link_5:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          right_caster:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -335,7 +385,37 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        camera_color_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_color_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_depth_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_depth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_optical_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        caster_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        caster_2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -355,7 +435,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        left_caster:
+        intel_camera_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -396,11 +476,6 @@ Visualization Manager:
           Show Trail: false
           Value: true
         link_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_caster:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -473,9 +548,9 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002b400000373fc0200000005fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000003f00fffffffb000000100044006900730070006c006100790073010000003b00000122000000c700fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000163000001900000016a00fffffffb0000000800480065006c0070000000029a0000006e0000006e00fffffffb0000000a0056006900650077007301000002f9000000b5000000a000ffffff000003ca0000037300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002b400000373fc0200000005fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000003f00fffffffb000000100044006900730070006c006100790073010000003b00000122000000c700fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000163000001900000016900fffffffb0000000800480065006c0070000000029a0000006e0000006e00fffffffb0000000a0056006900650077007301000002f9000000b5000000a000ffffff000003ca0000037300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 1668
-  X: 0
-  Y: 0
+  X: -32
+  Y: -32

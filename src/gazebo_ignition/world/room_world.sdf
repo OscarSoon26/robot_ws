@@ -12,8 +12,10 @@
     <plugin filename="ignition-gazebo-physics-system" name="ignition::gazebo::systems::Physics"/>
     <plugin filename="ignition-gazebo-user-commands-system" name="ignition::gazebo::systems::UserCommands"/>
     <plugin filename="ignition-gazebo-scene-broadcaster-system" name="ignition::gazebo::systems::SceneBroadcaster"/>
+    
+    <!-- ONLY ONE SENSORS SYSTEM (Using stable Ogre 1.x) -->
     <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors">
-      <render_engine>ogre2</render_engine>
+      <render_engine>ogre</render_engine>
     </plugin>
 
     <!-- Directional Sunlight -->
@@ -45,7 +47,7 @@
     <!-- ======================================================= -->
     <!-- ENCLOSED WALLS & ROOMS WITH 90CM (0.9M) DOORWAYS        -->
     <!-- ======================================================= -->
-    <model name="building_layout">
+    <model name="building_layout_1">
       <static>true</static>
       <link name="walls">
 
@@ -96,9 +98,7 @@
           <geometry><box><size>0.15 8.15 1.5</size></box></geometry>
         </visual>
 
-
         <!-- 2. INTERIOR DIVIDER: SOUTH WALL (at Y = -1.0) with DOORWAY 1 (90 cm) -->
-        <!-- Segment Left: from X = -4.0 to X = -2.45 (length 1.55m) -->
         <collision name="wall_s_left_col">
           <pose>-3.225 -1.0 0.75 0 0 0</pose>
           <geometry><box><size>1.55 0.15 1.5</size></box></geometry>
@@ -108,9 +108,6 @@
           <geometry><box><size>1.55 0.15 1.5</size></box></geometry>
         </visual>
 
-        <!-- *** DOORWAY 1 GAP: from X = -2.45 to X = -1.55 (Exact Width = 0.90 m) *** -->
-
-        <!-- Segment Right: from X = -1.55 to X = 4.0 (length 5.55m) -->
         <collision name="wall_s_right_col">
           <pose>1.225 -1.0 0.75 0 0 0</pose>
           <geometry><box><size>5.55 0.15 1.5</size></box></geometry>
@@ -120,9 +117,7 @@
           <geometry><box><size>5.55 0.15 1.5</size></box></geometry>
         </visual>
 
-
         <!-- 3. INTERIOR DIVIDER: NORTH WALL (at Y = 1.0) with DOORWAY 2 (90 cm) -->
-        <!-- Segment Left: from X = -4.0 to X = 0.55 (length 4.55m) -->
         <collision name="wall_n_left_col">
           <pose>-1.725 1.0 0.75 0 0 0</pose>
           <geometry><box><size>4.55 0.15 1.5</size></box></geometry>
@@ -132,9 +127,6 @@
           <geometry><box><size>4.55 0.15 1.5</size></box></geometry>
         </visual>
 
-        <!-- *** DOORWAY 2 GAP: from X = 0.55 to X = 1.45 (Exact Width = 0.90 m) *** -->
-
-        <!-- Segment Right: from X = 1.45 to X = 4.0 (length 2.55m) -->
         <collision name="wall_n_right_col">
           <pose>2.725 1.0 0.75 0 0 0</pose>
           <geometry><box><size>2.55 0.15 1.5</size></box></geometry>
@@ -144,9 +136,7 @@
           <geometry><box><size>2.55 0.15 1.5</size></box></geometry>
         </visual>
 
-
-        <!-- 4. VERTICAL PARTITION WALL (at X = 0.0, from Y = -4.0 to -1.0) with DOORWAY 3 (90 cm) -->
-        <!-- Segment South: from Y = -4.0 to Y = -2.95 (length 1.05m) -->
+        <!-- 4. VERTICAL PARTITION WALL (at X = 0.0) with DOORWAY 3 (90 cm) -->
         <collision name="wall_v_south_col">
           <pose>0.0 -3.475 0.75 0 0 0</pose>
           <geometry><box><size>0.15 1.05 1.5</size></box></geometry>
@@ -156,9 +146,6 @@
           <geometry><box><size>0.15 1.05 1.5</size></box></geometry>
         </visual>
 
-        <!-- *** DOORWAY 3 GAP: from Y = -2.95 to Y = -2.05 (Exact Width = 0.90 m) *** -->
-
-        <!-- Segment North: from Y = -2.05 to Y = -1.0 (length 1.05m) -->
         <collision name="wall_v_north_col">
           <pose>0.0 -1.525 0.75 0 0 0</pose>
           <geometry><box><size>0.15 1.05 1.5</size></box></geometry>

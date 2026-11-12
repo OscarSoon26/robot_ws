@@ -41,9 +41,9 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')
         ),
-        launch_arguments={'gz_args': f'-r -v 3 {world_file}'}.items()
+        launch_arguments={'gz_args': f'-r -v 3 --render-engine ogre {world_file}'}.items()
     )
-
+#add -s if no ui
     # 6. Robot State Publisher (using simulation time)
     rsp_node = Node(
         package='robot_state_publisher',
@@ -117,11 +117,15 @@ def generate_launch_description():
             '/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock',
             '/camera/image@sensor_msgs/msg/Image[ignition.msgs.Image',
             '/camera/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image',
-            '/camera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
+            #'/camera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
             '/camera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
             '/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan',
             '/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist',
             '/odom@nav_msgs/msg/Odometry[ignition.msgs.Odometry',
+            '/intel_d455/image@sensor_msgs/msg/Image[ignition.msgs.Image',
+            '/intel_d455/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image',
+            #'/intel_d455/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
+            '/intel_d455/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
         ],
         output='screen'
     )
